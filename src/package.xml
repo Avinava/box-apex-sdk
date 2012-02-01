@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apex Library for Box API</fullName>
+    <description>Apex Library for Box API</description>
+    <types>
+        <members>BoxToolkit</members>
+        <members>OauthBox_con</members>
+        <members>Test_BoxToolKit</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>oauth_box</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>BoxConnection__c.Api_Key__c</members>
+        <members>Box_Net_Oauth__c.Auth_Token__c</members>
+        <members>Box_Net_Oauth__c.OwnerId__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>BoxApiKey</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
+    </types>
+    <types>
+        <members>BoxConnection__c</members>
+        <members>Box_Net_Oauth__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Authorization</members>
+        <members>Box_Net_Oauth__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Box_Net_Oauth__c-Box%2Enet Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Box_Net_Oauth__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>jQuery</members>
+        <name>StaticResource</name>
+    </types>
+    <version>20.0</version>
+</Package>

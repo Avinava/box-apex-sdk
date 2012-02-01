@@ -1,0 +1,33 @@
+<apex:page controller="OauthBox_con"  action="{!checkAuthorization}" title="Authorization Page">
+    <apex:stylesheet value="{!URLFOR($Resource.jQuery, 'css/ui-lightness/jquery-ui-1.8.16.custom.css')}" />
+    <style>
+        .btn{width:130px;height:30px}
+    </style> 
+    <apex:form >
+        <apex:sectionHeader title="Box.Net Authorization Page" subtitle="Authorize/Revoke Access"/>
+         <apex:pageBlock title="Authorization Status"  id="pb">
+          
+                  <apex:outputpanel rendered="{!authState}">
+                        <div class="ui-state-highlight ui-corner-all" style="padding: 1em;height:65px;font-size: 1.2em;">
+                            <img src="/img/samples/light_green.gif"/> 
+                           
+                            <p><strong>Authorization Status : </strong>Box.net Integeration App is <b>Authorized</b>.</p>
+                        </div>
+                  </apex:outputpanel>
+                  <apex:outputpanel rendered="{!NOT(authState)}">
+                        <div class="ui-state-error ui-corner-all" style="padding: 1em;height:130px;font-size: 1.2em;"> 
+                            <img src="/img/samples/light_red.gif"/>
+                             
+                            <p><strong>Not Authorized:</strong> Please Authorize the application.</p> 
+                            <p>The application is not authorized to connect to your <b>Box.net</b> Account.</p>
+                            <p>Press the Authorize button,you will be redirected to the <b>Box.net</b> login page. Enter the <b>User Name</b> and <b>Password</b> and press <b>Log In</b> button to authorize. 
+                            </p>
+                           
+                        </div>               
+                    </apex:outputpanel> <br/><br/>
+                    <apex:commandButton action="{!AuthBox}" value="Authorize" id="authButton" styleClass="btn"/>
+                    <apex:commandButton action="{!revokeAccess}" value="Revoke Access" styleClass="btn" rendered="{!authState}"/>
+          
+         </apex:pageBlock>
+     </apex:form>
+</apex:page>
